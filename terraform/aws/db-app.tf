@@ -39,6 +39,7 @@ resource "aws_db_instance" "default" {
   lifecycle {
     ignore_changes = ["password"]
   }
+  auto_minor_version_upgrade = true
 }
 
 resource "aws_db_option_group" "default" {
